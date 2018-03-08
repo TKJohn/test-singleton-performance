@@ -1,13 +1,16 @@
+```bash
 mvn clean package
-java -jar benchmark.jar
+java -jar target\benchmark.jar
+```
 
 Result:
 
-|Benchmark                                        |Mode  |Cnt  |   Score |    Error  |Units|
-|-------------------------------------------------|------|-----|---------|-----------|-----|
-|AddDecLockTestMain.doubleSynchronizedLockerTest  |avgt  | 10  |1851.551 |±  19.539  |ms/op|
-|AddDecLockTestMain.reentrantLockLocker           |avgt  | 10  |4534.705 |± 173.604  |ms/op|
-|AddDecLockTestMain.singleSynchronizedLockerTest  |avgt  | 10  |6149.102 |± 342.512  |ms/op|
+|Benchmark                               |Mode  |Cnt  |   Score |    Error  |Units|
+|----------------------------------------|------|-----|---------|-----------|-----|
+|SingletonPerformance.doubleCheckedTest  |avgt  |10   |1094.002 |± 180.040  |ms/op|
+|SingletonPerformance.enumTest           |avgt  |10   |   4.313 |±   2.092  |ms/op|
+|SingletonPerformance.holderTest         |avgt  |10   |   3.882 |±   1.973  |ms/op|
+
 
 
 
